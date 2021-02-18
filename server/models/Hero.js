@@ -31,18 +31,19 @@ const schema = new mongoose.Schema({
     },
   },
   skills: [{
-    icon: {
-      type: String
-    },
     name: {
       type: String
     },
-    delay: {
+    icon: {
       type: String
     },
-    cost: {
-      type: String
-    },
+
+    // delay: {
+    //   type: String
+    // },
+    // cost: {
+    //   type: String
+    // },
     description: {
       type: String
     },

@@ -6,8 +6,8 @@
         <el-input v-model="form.name"></el-input>
       </el-form-item>
       <el-form-item label="物品图标">
-        <el-upload class="avatar-uploader" :action="$http.defaults.baseURL+'/upload'" :on-success="handleAvatarSuccess"
-          :show-file-list="false">
+        <el-upload class="avatar-uploader" :action="uploadURL" :headers="getAuthHeaders()"
+          :on-success="handleAvatarSuccess" :show-file-list="false">
           <img v-if="form.icon" :src="form.icon" class="avatar">
           <i v-else class="el-icon-plus avatar-uploader-icon"></i>
         </el-upload>
@@ -69,30 +69,4 @@
 </script>
 
 <style scoped>
-  .avatar-uploader .el-upload {
-    border: 1px dashed #d9d9d9;
-    border-radius: 6px;
-    cursor: pointer;
-    position: relative;
-    overflow: hidden;
-  }
-
-  .avatar-uploader .el-upload:hover {
-    border-color: #409EFF;
-  }
-
-  .avatar-uploader-icon {
-    font-size: 28px;
-    color: #8c939d;
-    width: 178px;
-    height: 178px;
-    line-height: 178px;
-    text-align: center;
-  }
-
-  .avatar {
-    width: 178px;
-    height: 178px;
-    display: block;
-  }
 </style>

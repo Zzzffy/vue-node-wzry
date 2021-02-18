@@ -65,7 +65,6 @@
       async getParentsCategories() {
         const res = await this.$http.get('/rest/categories')
         this.parents = res.data.data
-        console.log(this.parents);
       }
     }
 
