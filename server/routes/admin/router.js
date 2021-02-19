@@ -123,9 +123,9 @@ module.exports = (app) => {
     }
   })
 
-  //匹配以 /admin/api 开头的路由，将子路由挂载到上面
   const authMiddleWare = require('../../middleware/auth')
   const resourceMiddleWare = require('../../middleware/resource')
+  //匹配以 /admin/api 开头的路由，将子路由挂载到上面
   app.use('/admin/api/rest/:resource', authMiddleWare(), resourceMiddleWare(), router)
 
   // 图片处理插件 multer

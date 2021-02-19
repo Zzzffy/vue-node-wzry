@@ -7,7 +7,8 @@ app.use(require('cors')()) // 解决跨域问题（npm install cors）
 app.use(express.json()) // 把 post请求体解析为 json的中间件
 
 require('../server/plugins/db')(app)
-require('../server/routes/admin/router')(app)
+require('./routes/admin/router')(app)
+require('./routes/web/router')(app)
 
 app.use('/uploads', express.static(__dirname + '/uploads/'))
 
