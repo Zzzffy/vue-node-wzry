@@ -2,16 +2,22 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 const Main = () => import('../views/Main.vue')
 const Home = () => import('../views/Home.vue')
+const Article = () => import('../views//Article.vue')
 
 Vue.use(VueRouter)
 
 const routes = [{
   path: '/',
-  name: 'Main',
   component: Main,
   children: [{
-    path: '/home',
+    path: '/',
+    name: 'home',
     component: Home
+  }, {
+    path: '/articles/:id',
+    name: 'article',
+    component: Article,
+    props: true
   }]
 }]
 

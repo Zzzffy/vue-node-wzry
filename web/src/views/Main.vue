@@ -13,13 +13,13 @@
     <div class="bg-primary pt-3 pb-2">
       <div class="nav nav-inverse jc-around text-white pb-1">
         <div class="nav-item active">
-          <router-link to="/home" class="nav-link" tag="div">首页</router-link>
+          <router-link to="/" class="nav-link" tag="div">首页</router-link>
         </div>
         <div class="nav-item">
-          <router-link to="/home" class="nav-link" tag="div">攻略中心</router-link>
+          <router-link to="/" class="nav-link" tag="div">攻略中心</router-link>
         </div>
         <div class="nav-item">
-          <router-link to="/home" class="nav-link" tag="div">赛事中心</router-link>
+          <router-link to="/" class="nav-link" tag="div">赛事中心</router-link>
         </div>
       </div>
     </div>

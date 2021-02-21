@@ -40,7 +40,7 @@ module.exports = (app) => {
     //     queryOptions.populate = i
     //   }
     // }
-    const rs = await req.Model.find().setOptions(queryOptions).limit(10)
+    const rs = await req.Model.find().setOptions(queryOptions).limit(30)
     if (rs) {
       res.send({
         meta: {
